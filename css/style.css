@@ -1,0 +1,23 @@
+/* ********************************* */
+/* HEADER */
+/* ********************************* */
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar,
+.nav-user {
+  font-size: 1.8rem;
+  list-style: none;
+  color: #333;
+  display: flex;
+}
+
+.navbar a:link,
+.navbar a:visited {
+  text-decoration: none;
+  color: inherit;
+}
