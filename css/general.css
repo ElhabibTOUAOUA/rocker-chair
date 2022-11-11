@@ -20,7 +20,7 @@
 
 --- 02 COLORS
 
-- Primary: 
+- Primary: #7b5244
 - Tints: 
 
 - Shades: 
@@ -50,7 +50,11 @@ html {
 }
 
 body {
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+:root {
+  --main-color: #7b5244;
 }
 
 /* ********************************* */
