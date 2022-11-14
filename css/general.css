@@ -21,7 +21,7 @@
 --- 02 COLORS
 
 - Primary: #7b5244
-- Tints: 
+- Tints: #e5dcda
 
 - Shades: 
 - Accents:
@@ -73,4 +73,26 @@ body {
 
 .heading-secondary {
   font-size: 4.4rem;
+}
+
+.grid {
+  display: grid
+}
+
+.grid-1-cols {
+  grid-template-columns: 1fr;
+}
+
+.grid-6-cols {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.lg-menu {
+  min-width: 55rem;
+  padding: 2.4rem 8rem 3.2rem 1.6rem;
+}
+
+.sm-menu {
+  min-width: 15rem;
+  padding: 1.6rem;
 }
