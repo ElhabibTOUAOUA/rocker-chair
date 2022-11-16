@@ -185,7 +185,7 @@
 /* HERO SECTION */
 /* ********************************* */
 
-.section-hero {}
+/* .section-hero {} */
 
 .hero-img {
   width: 100%;
@@ -195,17 +195,9 @@
   position: relative;
 }
 
-.btn {
-  position: absolute;
-  border: none;
-  background: #fff;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
+
+
+.btn-effect {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -278,13 +270,96 @@
 }
 
 .dot:hover,
+.dot:active,
 .dot-active {
   background-color: #000;
 }
 
 
 /* ********************************* */
-/* SECTION CATEGORIES*/
+/* SECTION SPECIAL CATEGORY*/
+/* ********************************* */
+
+.category-items {
+  column-gap: 4rem;
+  position: relative;
+}
+
+.category-img {
+  width: 100%;
+}
+
+.cat-caption {
+  padding-top: 1.5rem;
+  position: relative;
+  gap: .8rem;
+}
+
+.cat-caption .cat-item-btn {
+  position: absolute;
+  top: 16;
+  right: 0;
+  background-color: var(--main-color);
+  color: #fff;
+  box-shadow: none !important;
+  align-self: flex-end;
+}
+
+.cat-pop {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #777;
+}
+
+.cat-type {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.category-img {
+  transition: all 0.3s ease-in-out;
+}
+
+.category-item:hover .category-img,
+.category-item:active .category-img {
+  box-shadow: 0px 5px 24px rgba(0, 0, 0, 0.2);
+}
+
+.category-item:hover .cat-item-btn,
+.category-item:active .cat-item-btn {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+.cat-item-btn:hover,
+.cat-item-btn:active {
+  background-color: #000;
+}
+
+.cat-type:hover,
+.cat-type:active {
+  color: var(--main-color);
+}
+
+.cat-dots {
+  position: absolute;
+  display: flex;
+  gap: 12px;
+  bottom: -10%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  /* opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.5s ease-in-out; */
+}
+
+
+
+
+/* ********************************* */
+/* SECTION FEATURED PRODUCTS*/
 /* ********************************* */
 
 .section-featured-products {
@@ -311,12 +386,13 @@
   width: 12rem;
 }
 
-.category-items {
+.featured-items {
   column-gap: 2rem;
   row-gap: 4rem;
 }
 
 .caption {
+  position: relative;
   padding-top: 1.5rem;
   gap: .8rem;
 }
