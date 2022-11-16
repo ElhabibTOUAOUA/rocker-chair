@@ -23,6 +23,10 @@
   position: relative;
 }
 
+.navbar .navbar-nav {
+  padding: 3rem 0;
+}
+
 .nav-user {
   display: flex;
   gap: 2rem;
@@ -30,11 +34,6 @@
 
 .nav-user li {
   cursor: pointer;
-}
-
-.navbar li {
-  height: 100%;
-  z-index: 20;
 }
 
 .nav-user li:hover {
@@ -87,10 +86,10 @@
   transition-delay: 0.2s;
 }
 
-.nav-link:hover:before,
-.nav-link:active:before,
-.nav-link:hover:after,
-.nav-link:active:after {
+.navbar-nav:hover .nav-link:before,
+.navbar-nav:active .nav-link:before,
+.navbar-nav:hover .nav-link:after,
+.navbar-nav:active .nav-link:after {
   transform: scale3d(1, 1, 1);
 }
 
@@ -133,6 +132,7 @@
   column-gap: 7rem;
   top: 71px;
   left: 0;
+  margin-top: 3rem;
   background-color: #fff;
   border: 2px solid var(--main-color);
   opacity: 0;
