@@ -3,7 +3,7 @@
 /* ********************************* */
 
 .header-content {
-  height: 100px;
+  height: 10rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -24,7 +24,7 @@
 }
 
 .navbar .navbar-nav {
-  padding: 3rem 0;
+  padding: 4rem 0;
 }
 
 .nav-user {
@@ -40,50 +40,46 @@
   color: var(--main-color)
 }
 
-.nav-link:link,
-.nav-link:visited {
-  display: block;
-  position: relative;
-  color: #333;
-  font-weight: 500;
-  text-decoration: none;
-  padding: 12px 22px
-}
-
-
 .nav-user:last-child i {
   position: relative;
 }
 
-.nav-link:before {
-  position: absolute;
+.nav-link:link,
+.nav-link:visited {
+  display: block;
+  position: relative;
+  border: 0;
+  color: #333;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 1.2rem 2.2rem;
+}
+
+.nav-link::before,
+.nav-link::after {
   content: "";
-  border-width: 0 2px;
-  border-style: solid;
-  border-color: var(--main-color);
-  width: 97%;
+  box-sizing: inherit;
+  position: absolute;
+  width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  transform: scale3d(1, 0, 1);
-  transform-origin: bottom;
-  transition: 0.2s all
 }
 
-.nav-link:after {
-  position: absolute;
-  content: "";
-  border-width: 2px 0;
-  border-style: solid;
-  border-color: var(--main-color);
-  width: 100%;
-  height: 90%;
-  top: 0;
-  left: 0;
-  transform: scale3d(0, 1, 1);
+.nav-link::before {
+  border-top: 2px solid #7b5244;
+  border-bottom: 2px solid #7b5244;
   transform-origin: left;
-  transition: 0.2s all;
-  transition-delay: 0.2s;
+  transform: scale3d(0, 1, 1);
+  transition: 0.2s ease-out 0.2s;
+}
+
+.nav-link::after {
+  border-left: 2px solid #7b5244;
+  border-right: 2px solid #7b5244;
+  transform-origin: center;
+  transform: scale3d(1, 0, 1);
+  transition: 0.2s ease-out;
 }
 
 .navbar-nav:hover .nav-link:before,
@@ -94,7 +90,7 @@
 }
 
 .nav-user .fa-2x {
-  font-size: 2.5rem !important;
+  font-size: 2.5rem;
 }
 
 .shop-bag i::after {
@@ -116,8 +112,8 @@
 
 .shop-bag span {
   margin-left: 1.4rem;
+  font-weight: 500;
 }
-
 
 /* Dropdown menu */
 
@@ -130,7 +126,7 @@
   z-index: 2;
   position: absolute;
   column-gap: 7rem;
-  top: 71px;
+  top: 79px;
   left: 0;
   margin-top: 3rem;
   background-color: #fff;
@@ -157,9 +153,8 @@
   gap: 1rem;
 }
 
-.list-th .dropdown-link {
-
-  color: var(--main-color) !important;
+.list-default .list-th .dropdown-link {
+  color: var(--main-color);
   font-weight: 500;
   margin-bottom: 1.6rem;
   padding-bottom: 2px;
@@ -301,7 +296,7 @@
   right: 0;
   background-color: var(--main-color);
   color: #fff;
-  box-shadow: none !important;
+  box-shadow: none;
   align-self: flex-end;
 }
 
@@ -364,6 +359,10 @@
 
 .section-featured-products {
   padding: 9rem 0 2rem 0;
+}
+
+.featured-img {
+  width: 100%;
 }
 
 .heading-box {
